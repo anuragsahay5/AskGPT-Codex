@@ -9,7 +9,7 @@ A ChatGPT AI based Application that will help you code and take help of this AI 
 Clone the project
 
 ```bash
-  git clone https://github.com/anuragsahay5/AskGPT-Codex/tree/main/client
+  git clone https://github.com/anuragsahay5/AskGPT-Codex/
 ```
 
 Go to the project directory
@@ -33,7 +33,7 @@ Start the client
 Clone the project
 
 ```bash
-  git clone https://github.com/anuragsahay5/AskGPT-Codex/tree/main/server
+  git clone https://github.com/anuragsahay5/AskGPT-Codex/
 ```
 
 Go to the project directory
