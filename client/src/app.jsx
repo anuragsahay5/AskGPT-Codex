@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import Userquery from "./components/Userquery";
-import Userresponse from "./components/UserResponse";
+import Userresponse from "./components/Userresponse";
 import Giveuniqueid from "./components/Giveuniqueid";
 import axios from "axios";
 import "./index.css";
@@ -86,6 +86,7 @@ function App() {
         <input
           id="input-query"
           disabled={!canSearch}
+          autoComplete={"off"}
           placeholder={canSearch ? "Ask a question..." : "generating..."}
         />
         <button type="submit" id="send-btn" disabled={!canSearch}></button>
