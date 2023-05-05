@@ -1,11 +1,11 @@
 import express from "express";
 import { Configuration, OpenAIApi } from "openai";
 import dotenv from "dotenv";
-
+import cors from "cors";
 const app = express();
-const port = 3000 || process.env.port;
 
 app.use(express.json());
+app.use(cors());
 dotenv.config();
 
 const configuration = new Configuration({
@@ -39,4 +39,5 @@ app.post("/api", async (req, res) => {
   }
 });
 
+const port = 3000 || process.env.port;
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
