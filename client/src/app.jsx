@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Userquery from "./components/Userquery";
 import Userresponse from "./components/Userresponse";
 import Giveuniqueid from "./components/Giveuniqueid";
@@ -6,10 +6,16 @@ import axios from "axios";
 import "./index.css";
 
 function App() {
+  console.warn = () => {};
+
   const [canSearch, setcanSearch] = useState(1); // turned off when search in progress
-  console.warn = ()=>{}
 
   let chat_container = document.getElementById("chat-container");
+
+  /*  Related to orientation change and view */
+  useEffect(() => {
+    chat_container.style.height = `${window.innerHeight - 100}px`;
+  }, []);
 
   // Functions
 
@@ -64,9 +70,12 @@ function App() {
     const searchInterval = searchLoad(element);
 
     try {
-      const response = await axios.post("https://askgpt-back-99ji8.onrender.com/api", {
-        query: `${searchVal}`,
-      });
+      const response = await axios.post(
+        "https://askgpt-back-99ji8.onrender.com/api",
+        {
+          query: `${searchVal}`,
+        }
+      );
       clearInterval(searchInterval);
 
       if (response.status == 200) {
@@ -76,7 +85,7 @@ function App() {
     } catch (error) {
       clearInterval(searchInterval);
       element.innerHTML = `${error.response.request.statusText}`;
-      setcanSearch(1)
+      setcanSearch(1);
     }
   }
 
