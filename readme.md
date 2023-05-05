@@ -76,5 +76,5 @@ To run this project, you will need to add the following environment variables to
 
 ## Screenshots
 
-![App Screenshot](https://github.com/anuragsahay5/AskGPT-Codex/blob/main/screenshots/Screenshot-askgpt.png)
+![App Screenshot](./screenshots/Screenshot-askgpt.png)
 
