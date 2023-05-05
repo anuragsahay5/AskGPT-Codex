@@ -64,7 +64,7 @@ function App() {
     const searchInterval = searchLoad(element);
 
     try {
-      const response = await axios.post("/api", {
+      const response = await axios.post("https://askgpt-back-99ji8.onrender.com/api", {
         query: `${searchVal}`,
       });
       clearInterval(searchInterval);
