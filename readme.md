@@ -1,7 +1,7 @@
 
 # AskGPT - Codex
 
-A ChatGPT AI Application that will help you code and take help of this AI whenever you are stuck. A reliable App based on Text-davinci-003.
+A ChatGPT AI based Application that will help you code and take help of this AI whenever you are stuck. A reliable App based on Text-davinci-003.
 
 
 ## How to use
